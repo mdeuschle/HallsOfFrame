@@ -14,13 +14,11 @@
 
 
 @implementation CustomView
+- (IBAction)onButtonTapped:(UIButton *)sender {
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+    [self.delegate viewCollectionViewCellColor:self didTapButton:sender];
 }
-*/
+
+
 
 @end

@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CustomView : UIView
+@protocol ChangeColorDelegate <NSObject>
+
+-(void)viewCollectionViewCellColor:(id)cell didTapButton:(UIButton *)button;
 
 @end
+
+@interface CustomView : UIView
+
+@property (nonatomic, assign) id<ChangeColorDelegate>delegate;
+
+@end
+

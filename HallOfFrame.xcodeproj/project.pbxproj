@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A51DFA91C502A680015EA2E /* Picture.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A51DFA81C502A680015EA2E /* Picture.m */; };
 		A80452851C50275B00B59865 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A80452841C50275B00B59865 /* main.m */; };
 		A80452881C50275B00B59865 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A80452871C50275B00B59865 /* AppDelegate.m */; };
 		A804528B1C50275B00B59865 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A804528A1C50275B00B59865 /* ViewController.m */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A51DFA71C502A680015EA2E /* Picture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Picture.h; path = ../Picture.h; sourceTree = "<group>"; };
+		5A51DFA81C502A680015EA2E /* Picture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Picture.m; path = ../Picture.m; sourceTree = "<group>"; };
 		A80452801C50275B00B59865 /* HallOfFrame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HallOfFrame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A80452841C50275B00B59865 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A80452861C50275B00B59865 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -62,6 +65,8 @@
 				A80452871C50275B00B59865 /* AppDelegate.m */,
 				A80452891C50275B00B59865 /* ViewController.h */,
 				A804528A1C50275B00B59865 /* ViewController.m */,
+				5A51DFA71C502A680015EA2E /* Picture.h */,
+				5A51DFA81C502A680015EA2E /* Picture.m */,
 				A804528C1C50275B00B59865 /* Main.storyboard */,
 				A804528F1C50275B00B59865 /* Assets.xcassets */,
 				A80452911C50275B00B59865 /* LaunchScreen.storyboard */,
@@ -150,6 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A51DFA91C502A680015EA2E /* Picture.m in Sources */,
 				A804528B1C50275B00B59865 /* ViewController.m in Sources */,
 				A80452881C50275B00B59865 /* AppDelegate.m in Sources */,
 				A80452851C50275B00B59865 /* main.m in Sources */,
@@ -301,6 +307,7 @@
 				A80452991C50275B00B59865 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

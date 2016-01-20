@@ -8,20 +8,35 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+
+@interface ViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
+//@property (weak, nonatomic) IBOutlet UICollectionViewCell *pictureImageView;
 
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+-(NSInteger) collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return 5;
 }
+
+-(UICollectionViewCell *) collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PictureCollectionViewCell" forIndexPath:indexPath];
+    
+    self.pictureImageView.image = [UIImage imageNamed:@"1"];
+    
+    return cell;
+}
+
 
 @end

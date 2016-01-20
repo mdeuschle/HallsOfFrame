@@ -11,7 +11,7 @@
 #import "PictureCollectionViewCell.h"
 
 
-@interface ViewController () <UICollectionViewDataSource, UICollectionViewDelegate, PictureCollectionViewCellDelegate>
+@interface ViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
 //@property (weak, nonatomic) IBOutlet Picture *pictureImageView;
 @property NSArray *picturesArray;
 @end
@@ -56,7 +56,10 @@
     
     PictureCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PictureCollectionViewCell" forIndexPath:indexPath];
     
-    cell.delegate = self;
+    Picture *picture = self.picturesArray[0];
+    UIImage *pictureFill = picture.image;
+    
+    cell.pictureImageView.image = pictureFill;
     
     return cell;
 }

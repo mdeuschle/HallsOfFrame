@@ -7,17 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@protocol PictureCollectionViewCellDelegate <NSObject>
-
--(UIImage *)pictureCollectionViewCellPopulateImageView;
-
-@end
+//
+//@protocol PictureCollectionViewCellDelegate <NSObject>
+//
+//-(UIImage *)pictureCollectionViewCellPopulateImageView;
+//
+//@end
 
 
 
 @interface PictureCollectionViewCell : UICollectionViewCell
 
-@property (nonatomic, assign) id<PictureCollectionViewCellDelegate> delegate;
+//@property (nonatomic, assign) id<PictureCollectionViewCellDelegate> delegate;
+
+@property (weak, nonatomic) IBOutlet UIImageView *pictureImageView;
+
 
 @end

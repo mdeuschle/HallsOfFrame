@@ -8,6 +8,13 @@
 
 #import "Picture.h"
 
+@interface Picture ()
+
+
+
+@end
+
+
 @implementation Picture
 
 -(instancetype)initWithFrameColor:(UIColor *)frameColor andImage:(UIImage *)image

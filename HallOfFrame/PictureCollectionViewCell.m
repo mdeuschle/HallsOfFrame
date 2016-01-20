@@ -10,7 +10,6 @@
 
 @interface PictureCollectionViewCell ()
 
-@property (weak, nonatomic) IBOutlet UIImageView *pictureImageView;
 
 @end
 
@@ -22,7 +21,7 @@
 
 - (IBAction)onFoodTiemTapped:(UIButton *)sender
 {
-    self.pictureImageView.image = [self.delegate pictureCollectionViewCellPopulateImageView];
+//    self.pictureImageView.image = [self.delegate pictureCollectionViewCellPopulateImageView];
     
     NSLog(@"What the hell is happening?");
 }

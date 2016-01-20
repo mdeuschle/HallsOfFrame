@@ -46,6 +46,12 @@
     return pictureFill;
 }
 
+-(void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    CustomView *customView = [[[NSBundle mainBundle] loadNibNamed:@"CustomizationView" owner:self options:nil] objectAtIndex:0];
+    [self.view addSubview:customView];
+}
+
 -(void)viewCollectionViewCellColor:(id)thing didTapButton:(UIButton *)button
 {
     
@@ -67,6 +73,8 @@
     
 }
 
+
+
 -(NSInteger) collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     return 5;
@@ -75,6 +83,8 @@
 -(UICollectionViewCell *) collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     
+    
+    
     PictureCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PictureCollectionViewCell" forIndexPath:indexPath];
     
     Picture *picture = self.picturesArray[indexPath.row];
@@ -82,6 +92,7 @@
     
     cell.pictureImageView.image = pictureFill;
 
+    
     
     return cell;
 }

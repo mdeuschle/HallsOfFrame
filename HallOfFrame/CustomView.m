@@ -17,6 +17,7 @@
 - (IBAction)onButtonTapped:(UIButton *)sender {
 
     [self.delegate viewCollectionViewCellColor:self didTapButton:sender];
+    [self removeFromSuperview];
 }
 
 

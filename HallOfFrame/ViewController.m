@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#include "Picture.h"
 
 
 @interface ViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
@@ -19,7 +20,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+    Picture *picOne = [[Picture alloc]initWithFrameColor:[UIColor redColor] andImage:[UIImage imageNamed:@"1"]];
+
+    Picture *picTwo = [[Picture alloc]initWithFrameColor:[UIColor redColor] andImage:[UIImage imageNamed:@"2"]];
+
+    Picture *picThree = [[Picture alloc]initWithFrameColor:[UIColor redColor] andImage:[UIImage imageNamed:@"3"]];
+
+    Picture *picFour = [[Picture alloc]initWithFrameColor:[UIColor redColor] andImage:[UIImage imageNamed:@"4"]];
+
+    Picture *picFive = [[Picture alloc]initWithFrameColor:[UIColor redColor] andImage:[UIImage imageNamed:@"5"]];
 }
 
 
@@ -33,7 +43,7 @@
     
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PictureCollectionViewCell" forIndexPath:indexPath];
     
-    self.pictureImageView.image = [UIImage imageNamed:@"1"];
+//    self.pictureImageView.image = [UIImage imageNamed:@"1"];
     
     return cell;
 }

@@ -56,7 +56,7 @@
     
     PictureCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PictureCollectionViewCell" forIndexPath:indexPath];
     
-    Picture *picture = self.picturesArray[0];
+    Picture *picture = self.picturesArray[indexPath.row];
     UIImage *pictureFill = picture.image;
     
     cell.pictureImageView.image = pictureFill;

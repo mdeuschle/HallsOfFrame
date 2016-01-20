@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		5A51DFA91C502A680015EA2E /* Picture.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A51DFA81C502A680015EA2E /* Picture.m */; };
 		5A51DFAC1C5033120015EA2E /* PictureCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A51DFAB1C5033120015EA2E /* PictureCollectionViewCell.m */; };
+		5A51DFB11C503E310015EA2E /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A51DFB01C503E310015EA2E /* CustomView.m */; };
+		5A51DFB31C503EEB0015EA2E /* CustomizationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A51DFB21C503EEB0015EA2E /* CustomizationView.xib */; };
 		A80452851C50275B00B59865 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A80452841C50275B00B59865 /* main.m */; };
 		A80452881C50275B00B59865 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A80452871C50275B00B59865 /* AppDelegate.m */; };
 		A804528B1C50275B00B59865 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A804528A1C50275B00B59865 /* ViewController.m */; };
@@ -22,6 +24,9 @@
 		5A51DFA81C502A680015EA2E /* Picture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Picture.m; path = ../Picture.m; sourceTree = "<group>"; };
 		5A51DFAA1C5033120015EA2E /* PictureCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureCollectionViewCell.h; sourceTree = "<group>"; };
 		5A51DFAB1C5033120015EA2E /* PictureCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureCollectionViewCell.m; sourceTree = "<group>"; };
+		5A51DFAF1C503E310015EA2E /* CustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomView.h; sourceTree = "<group>"; };
+		5A51DFB01C503E310015EA2E /* CustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomView.m; sourceTree = "<group>"; };
+		5A51DFB21C503EEB0015EA2E /* CustomizationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CustomizationView.xib; path = ../CustomizationView.xib; sourceTree = "<group>"; };
 		A80452801C50275B00B59865 /* HallOfFrame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HallOfFrame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A80452841C50275B00B59865 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A80452861C50275B00B59865 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -64,8 +69,11 @@
 		A80452821C50275B00B59865 /* HallOfFrame */ = {
 			isa = PBXGroup;
 			children = (
+				5A51DFB21C503EEB0015EA2E /* CustomizationView.xib */,
 				A80452861C50275B00B59865 /* AppDelegate.h */,
 				A80452871C50275B00B59865 /* AppDelegate.m */,
+				5A51DFAF1C503E310015EA2E /* CustomView.h */,
+				5A51DFB01C503E310015EA2E /* CustomView.m */,
 				A80452891C50275B00B59865 /* ViewController.h */,
 				A804528A1C50275B00B59865 /* ViewController.m */,
 				5A51DFA71C502A680015EA2E /* Picture.h */,
@@ -149,6 +157,7 @@
 			files = (
 				A80452931C50275B00B59865 /* LaunchScreen.storyboard in Resources */,
 				A80452901C50275B00B59865 /* Assets.xcassets in Resources */,
+				5A51DFB31C503EEB0015EA2E /* CustomizationView.xib in Resources */,
 				A804528E1C50275B00B59865 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -165,6 +174,7 @@
 				A804528B1C50275B00B59865 /* ViewController.m in Sources */,
 				A80452881C50275B00B59865 /* AppDelegate.m in Sources */,
 				A80452851C50275B00B59865 /* main.m in Sources */,
+				5A51DFB11C503E310015EA2E /* CustomView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

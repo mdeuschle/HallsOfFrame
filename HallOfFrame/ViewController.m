@@ -7,12 +7,13 @@
 //
 
 #import "ViewController.h"
-#include "Picture.h"
+#import "Picture.h"
+#import "PictureCollectionViewCell.h"
 
 
-@interface ViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
-//@property (weak, nonatomic) IBOutlet UICollectionViewCell *pictureImageView;
-
+@interface ViewController () <UICollectionViewDataSource, UICollectionViewDelegate, PictureCollectionViewCellDelegate>
+//@property (weak, nonatomic) IBOutlet Picture *pictureImageView;
+@property NSArray *picturesArray;
 @end
 
 @implementation ViewController
@@ -30,6 +31,18 @@
     Picture *picFour = [[Picture alloc]initWithFrameColor:[UIColor redColor] andImage:[UIImage imageNamed:@"4"]];
 
     Picture *picFive = [[Picture alloc]initWithFrameColor:[UIColor redColor] andImage:[UIImage imageNamed:@"5"]];
+    
+    self.picturesArray = [NSArray arrayWithObjects: picOne, picTwo, picThree, picFour, picFive, nil];
+}
+
+-(UIImage *)pictureCollectionViewCellPopulateImageView;
+{
+    Picture *picture = self.picturesArray[0];
+    UIImage *pictureFill = picture.image;
+    
+    return pictureFill;
+
+    
 }
 
 
@@ -41,9 +54,9 @@
 -(UICollectionViewCell *) collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PictureCollectionViewCell" forIndexPath:indexPath];
+    PictureCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PictureCollectionViewCell" forIndexPath:indexPath];
     
-//    self.pictureImageView.image = [UIImage imageNamed:@"1"];
+    cell.delegate = self;
     
     return cell;
 }

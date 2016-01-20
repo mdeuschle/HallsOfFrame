@@ -9,10 +9,12 @@
 #import "ViewController.h"
 #import "Picture.h"
 #import "PictureCollectionViewCell.h"
+#import "CustomView.h"
 
 
-@interface ViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
+@interface ViewController () <UICollectionViewDataSource, UICollectionViewDelegate, ChangeColorDelegate>
 //@property (weak, nonatomic) IBOutlet Picture *pictureImageView;
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property NSArray *picturesArray;
 @end
 
@@ -33,6 +35,7 @@
     Picture *picFive = [[Picture alloc]initWithFrameColor:[UIColor redColor] andImage:[UIImage imageNamed:@"5"]];
     
     self.picturesArray = [NSArray arrayWithObjects: picOne, picTwo, picThree, picFour, picFive, nil];
+
 }
 
 -(UIImage *)pictureCollectionViewCellPopulateImageView;
@@ -41,10 +44,28 @@
     UIImage *pictureFill = picture.image;
     
     return pictureFill;
-
-    
 }
 
+-(void)viewCollectionViewCellColor:(id)thing didTapButton:(UIButton *)button
+{
+    
+    NSArray *indexPath = self.collectionView.indexPathsForSelectedItems;
+    Picture *picture = [indexPath objectAtIndex:0];
+    
+    if ([button.titleLabel.text isEqualToString:@"Red"])
+         {
+             picture.frameColor = [UIColor redColor];
+         }
+    else if ([button.titleLabel.text isEqualToString:@"Green"])
+    {
+        picture.frameColor = [UIColor greenColor];
+    }
+    else
+    {
+        picture.frameColor = [UIColor greenColor];
+    }
+    
+}
 
 -(NSInteger) collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
@@ -60,6 +81,7 @@
     UIImage *pictureFill = picture.image;
     
     cell.pictureImageView.image = pictureFill;
+
     
     return cell;
 }

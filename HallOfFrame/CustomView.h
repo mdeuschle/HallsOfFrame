@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PictureCollectionViewCell.h"
 
 @protocol ChangeColorDelegate <NSObject>
 
--(void)viewCollectionViewCellColor:(id)cell didTapButton:(UIButton *)button;
+-(void)viewCollectionViewCellColor:(id)thing didTapButton:(UIButton *)button;
 
 @end
 
